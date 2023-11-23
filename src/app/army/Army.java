@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 public class Army {
     private ArrayList<Batalion> batalions;
+    private String name;
 
-    public Army(){
+    public Army(String name){
+        this.name = name;
         this.batalions = new ArrayList<>();
         buildArmy();
     }
@@ -15,6 +17,10 @@ public class Army {
             Batalion b = new Batalion();
             batalions.add(b);
         }
+    }
+
+    public String getName(){
+        return this.name;
     }
 
     @Override
